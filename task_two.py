@@ -10,7 +10,6 @@ def do_task_two():
     print("\nEmployee who's department is within range (30 - 110) "
           "AND who's salary is >4200")
     emp_details = {}  # to store hire date and name of employees
-
     for emp in HandleCSV.read_csv_line_by_line():
         # pulls details of each employee in csv file
         if int(emp["DEPARTMENT_ID"]) in range(30, 111) and int(emp["SALARY"]) > 4200:
@@ -24,5 +23,3 @@ def do_task_two():
                 emp_details[hire_date].append(name)
 
     pprint(emp_details)
-
-

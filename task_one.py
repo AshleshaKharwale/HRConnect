@@ -14,4 +14,3 @@ def do_task_one():
             print(task_one_format(emp))
 
 
-

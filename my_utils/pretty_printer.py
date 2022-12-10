@@ -7,7 +7,7 @@ def task_one_format(details) -> Dict:
     :param details: dictionary with all the details of employee
     :return: dictionary with only name, email and phone number
     """
-    formatted_details = {"Name": details.get("FIRST_NAME") + details.get("LAST_NAME"),
+    formatted_details = {"Name": details.get("FIRST_NAME") + " " + details.get("LAST_NAME"),
                          "Email": details.get("EMAIL"),
                          "Phone number": details.get("PHONE_NUMBER")
                          }

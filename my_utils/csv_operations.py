@@ -42,4 +42,3 @@ class HandleCSV:
                 yield line
 
 
-# pprint(HandleCSV.read_entire_csv())
