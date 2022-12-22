@@ -13,8 +13,8 @@ class HandleCSV:
         1. read_entire_csv()
         2. read_csv_line_by_line()
     """
-    # filename = "C:\\Users\\Ashlesha\\PycharmProjects\\HRConnect\\employees.csv"
-    filename = "C:/Users/Ashlesha/PycharmProjects/HRConnect/employees.csv"
+    # filename = "C:\\Users\\Ashlesha\\PycharmProjects\\my_HRConnect\\employees.csv"
+    filename = "C:/Users/Ashlesha/PycharmProjects/my_HRConnect/employees.csv"
     # absolute path of the csv file
 
     @classmethod
@@ -42,3 +42,7 @@ class HandleCSV:
                 yield line
 
 
+if __name__ == "__main__":
+    for employee in HandleCSV.read_entire_csv():
+        if int(employee["SALARY"]) > 9000:
+            print(employee["FIRST_NAME"], employee["LAST_NAME"])
