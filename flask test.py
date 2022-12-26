@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 from task_one import do_task_one
 from task_two import do_task_two
 
 
 app = Flask(__name__)
-breakpoint()
+# breakpoint()
 
 @app.route("/", methods=["GET", "POST"])
 def home():
@@ -26,7 +26,7 @@ def taskone():
 
 @app.route("/api/tasktwo")
 def tasktwo():
-    return json.dumps(do_task_two())
+    return jsonify(do_task_two())
 
 
 if __name__ == "__main__":
